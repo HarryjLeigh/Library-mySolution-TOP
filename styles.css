@@ -1,0 +1,113 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#cards-container {
+  font-size: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Card Styling */
+.card {
+  background-color: #f9f9f9;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card-buttons button {
+  flex: 1;
+}
+
+/* Form Styling */
+form {
+  width: 80%;
+  margin: 5rem auto;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: none;
+}
+
+form p {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.button-paragraph {
+  margin-top: -1rem;
+  text-align: center;
+}
+
+/* Button Styles */
+button {
+  width: 20%;
+  padding: 0.2rem;
+}
+
+#newBookBtn {
+  width: 9rem;
+  margin-top: 3rem;
+}
+
+.removeBookBtn {
+  width: 6rem;
+  margin-right: 0.8rem;
+}
+
+.changeStatusBtn {
+  width: 8rem;
+}
+
+.submitBtn {
+  margin-bottom: 2rem;
+}
+
+#closeDialog {
+  display: block;
+  width: 6rem;
+  margin: 2rem auto -3rem 1rem;
+}
+
+/* Fieldset & Legend */
+legend {
+  margin: 1rem 0 -1rem 0.5rem;
+}
+
+/* Dialog Styles */
+dialog {
+  width: 40%;
+  height: 40%;
+  margin: 0 auto;
+  overflow: hidden;
+}

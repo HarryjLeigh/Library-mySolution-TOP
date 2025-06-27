@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Library</title>
+  </head>
+  <body>
+    <p class="button-paragraph">
+      <button type="submit" id="newBookBtn">New book</button>
+    </p>
+
+    <dialog close>
+      <button autofocus id="closeDialog">Close</button>
+      <form id="bookForm">
+        <fieldset>
+          <legend>Book Details</legend>
+          <p>
+            <label for="bookTitle">Title:</label>
+            <input type="text" id="bookTitle" name="title" required />
+          </p>
+
+          <p>
+            <label for="bookAuthor">Author:</label>
+            <input type="text" id="bookAuthor" name="author" required />
+          </p>
+
+          <p>
+            <label for="bookPages">Amount of Pages:</label>
+            <input
+              type="number"
+              min="1"
+              max="2000"
+              id="bookPages"
+              name="pages"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="bookRead">Has read book?</label>
+            <input type="checkbox" id="bookRead" name="read" />
+          </p>
+        </fieldset>
+        <section>
+          <p class="button-paragraph">
+            <button type="submit" class="submitBtn">Submit</button>
+          </p>
+        </section>
+      </form>
+    </dialog>
+    <div id="cards-container"></div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
