@@ -56,28 +56,10 @@ function createCardButtons(btnContent, btnIds) {
     btn.textContent = content;
     btn.type = "button";
     btn.className = `${btnIds[index]}`;
-
-    createBtnEventListeners(btn);
-    cardButtonsContainer.appendChild(btn);
+    cardButtonsContainer.append(btn);
   });
 
   return cardButtonsContainer;
-}
-
-function createBtnEventListeners(btn) {
-  if (btn.className === "removeBookBtn") {
-    btn.addEventListener("click", () => {
-      const bookId = btn.parentElement.parentElement.dataset.id;
-      removeBook(bookId);
-    });
-  } else if (btn.className === "changeStatusBtn") {
-    btn.addEventListener("click", () => {
-      const bookId = btn.parentElement.parentElement.dataset.id;
-      changeBookStatus(bookId);
-    });
-  }
-
-  return btn;
 }
 
 function removeBook(id) {
@@ -121,3 +103,16 @@ newBookButton.addEventListener("click", () => {
 closeDialog.addEventListener("click", () => {
   dialog.close();
 });
+
+document
+  .getElementById("cards-container")
+  .addEventListener("click", (event) => {
+    if (event.target.classList.contains("removeBookBtn")) {
+      const bookId = event.target.closest("[data-id]").dataset.id;
+      removeBook(bookId);
+    }
+    if (event.target.classList.contains("changeStatusBtn")) {
+      const bookId = event.target.closest("[data-id]").dataset.id;
+      changeBookStatus(bookId);
+    }
+  });
